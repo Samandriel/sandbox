@@ -3,6 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
+  $("select#address_country").select2
+    width: '250px'
+
+$ ->
   $('select#address_country').change (event) ->
     select_wrapper = $('#subregion-field')
 
@@ -17,14 +21,4 @@ $ ->
   $('select#locals').change (event) ->
     $(@).closest('form').submit()
 
-$ ->
-  $("select#address_country").select2(
-  	width: '250px')
     
-
-# $ ->
-#   $('#address_country').on(<event>, <callback)
-#     $('#address_country').chosen
-#       allow_single_deselect: true
-#       no_results_text: 'No results matched'
-#       width: '250px'
