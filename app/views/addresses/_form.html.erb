@@ -16,9 +16,9 @@
     <%= f.country_select :country, priority: %w{TH SG MY}, prompt: "Please select a country" %>
   </div>
 
-  <div class="field">
+  <div id="subregion">
     <%= f.label :city %><br />
-    <%= render partial: 'subregion_select', locals: {parent_region: f.object.country} %>
+    <%= render partial: 'subregion_select', locals: {parent_region: f.object.country}, :remote => true %>
   </div>
 
   <div class="field">

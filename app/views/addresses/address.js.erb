@@ -1,0 +1,6 @@
+$("#subregion").html("<%= j render partial: 'subregion_select' %>").trigger('show');
+ 
+$("#subregion-field").on('show', function() {
+   $('select#address_city').select2()
+});
+   
